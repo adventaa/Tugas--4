@@ -1,0 +1,100 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <title>Tugas 4 | Adventa</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+    </style>
+
+<body> 
+    <!---- <div> 
+    <p> <center>Masukkan identitas anda</center> </p>
+    <center>
+    <form id="frm1">
+        Nama : <input type="text" name="fname"><br>
+        Jumlah Pilihan : <input type="number" name="lname"><br><br>
+        <input type="button" onclick="myFunction()" value="OK">
+      </form>
+    </center>
+    </div>
+    !---->
+    
+<div class="Box">
+    <p> <center>Masukkan identitas anda</center> </p>
+
+    <div class="Card">
+        <div class="Card Nama">
+            <span>Nama : </span>
+            <input type="text" id="nama" value="">
+        </div>
+
+    <p></p>
+
+        <div class="Card Jumlah">
+            <span>Jumlah Pilihan : </span>
+            <input type="number" id="jumlah">
+        </div>
+
+    <p></p>
+
+        <button onclick="kirim()">OK</button>                      
+    </div>
+    
+    <div class="Card">
+        <div id="Demo"></div>
+    </div>              
+
+    <div id="Tombol"></div>
+
+    <div class="Card">
+        <div id="Demo2"></div>
+    </div>  
+    
+</div>
+
+
+<script>
+    var id_nama = document.getElementById("nama");
+    var id_jmlh = document.getElementById("jumlah");
+    //var id_tamp = document.getElementById("tampilan");
+    //var i;
+    function kirim() {
+        let text = "";
+        
+        //for untuk form input
+        for (let i = 1; i <= id_jmlh.value; i++) {
+            text += "Pilihan " + i + " " + '<input class="form-control"  name = "DynamicTextBox"  id=  "DynamicTextBox"  type="text" value = "" />' + "<br>" + "<br>";
+        }
+        document.getElementById("Demo").innerHTML = text;
+        document.getElementById("Tombol").innerHTML = '<button onclick="kirim2()">OK</button>';
+        // id_tamp.innerText = id_nama.value + ", " + id_jmlh.value;            
+    }
+
+    //fungsi untuk perulangan radiobutton
+    function kirim2() {
+        let text = "";
+        
+        // for untuk radiobutton
+        for (let i = 1; i <= id_jmlh.value; i++) {
+            text += '<input type="radio" name="menuradio"  id="menuradio"  type="text"  value=""/>' + "Pilihan " + i + " " + "<br>" + "<br>";
+        }
+        document.getElementById("Demo2").innerHTML = text;
+    
+    }
+
+    // bentuk drop down
+    //function kirim3(){
+        //var x=
+    //document.getElementById("Jumlah").options[0].text;
+    //document.getElementById("Demo").innerHTML = x;
+
+    //}
+</script>
+
+</body>
+</html>
