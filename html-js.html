@@ -11,90 +11,50 @@
         }
     </style>
 
-<body> 
-    <!---- <div> 
-    <p> <center>Masukkan identitas anda</center> </p>
-    <center>
-    <form id="frm1">
-        Nama : <input type="text" name="fname"><br>
-        Jumlah Pilihan : <input type="number" name="lname"><br><br>
-        <input type="button" onclick="myFunction()" value="OK">
-      </form>
-    </center>
+    <div class="header">
+        <center>
+            <h2>Fransisca Dyah Adventa Puti Maharani<br><br>215314062</h2>
+            <img src ="F:\Kuliah\Semester 4\Pemograman Berbasis Platform B\foto.jpg" style="weidth:300px;height:200px;"> 
+        </center>
     </div>
-    !---->
-    
-<div class="Box">
-    <p> <center>Masukkan identitas anda</center> </p>
 
-    <div class="Card">
-        <div class="Card Nama">
-            <span>Nama : </span>
-            <input type="text" id="nama" value="">
-        </div>
+    <body> 
+     
+        <div class="Box">
+            <p> <center>Masukkan Identitas Anda</center> </p>
 
-    <p></p>
+            <div class="Card">
+                <div class="Card Nama">
+                    <label for="nama">Nama : </label>
+                    <input type="text" id="nama" />
+                </div>
 
-        <div class="Card Jumlah">
-            <span>Jumlah Pilihan : </span>
-            <input type="number" id="jumlah">
-        </div>
+                <p></p>
 
-    <p></p>
+                <div class="Card Jumlah">
+                    <label for="jumlah">Jumlah Pilihan : </label>
+                    <input type="number" id="jumlah" />
+                </div>
 
-        <button onclick="kirim()">OK</button>                      
-    </div>
-    
-    <div class="Card">
-        <div id="Demo"></div>
-    </div>              
+                <p></p>
 
-    <div id="Tombol"></div>
-
-    <div class="Card">
-        <div id="Demo2"></div>
-    </div>  
-    
-</div>
-
-
-<script>
-    var id_nama = document.getElementById("nama");
-    var id_jmlh = document.getElementById("jumlah");
-    //var id_tamp = document.getElementById("tampilan");
-    //var i;
-    function kirim() {
-        let text = "";
+                <button onclick="kirim()">OK</button>  
+                <div id="pilih"></div>
+                <div id="tombol"></div>
+                <form>
+                    <div id="list"></div>
+                    <div id="submit1"></div>
+                </form> 
         
-        //for untuk form input
-        for (let i = 1; i <= id_jmlh.value; i++) {
-            text += "Pilihan " + i + " " + '<input class="form-control"  name = "DynamicTextBox"  id=  "DynamicTextBox"  type="text" value = "" />' + "<br>" + "<br>";
-        }
-        document.getElementById("Demo").innerHTML = text;
-        document.getElementById("Tombol").innerHTML = '<button onclick="kirim2()">OK</button>';
-        // id_tamp.innerText = id_nama.value + ", " + id_jmlh.value;            
-    }
+                <p id="result"></p>
+                <script src="js-edit.js"></script>
 
-    //fungsi untuk perulangan radiobutton
-    function kirim2() {
-        let text = "";
-        
-        // for untuk radiobutton
-        for (let i = 1; i <= id_jmlh.value; i++) {
-            text += '<input type="radio" name="menuradio"  id="menuradio"  type="text"  value=""/>' + "Pilihan " + i + " " + "<br>" + "<br>";
-        }
-        document.getElementById("Demo2").innerHTML = text;
+            </div>
+     
+        </div>
     
-    }
+    </body>
 
-    // bentuk drop down
-    //function kirim3(){
-        //var x=
-    //document.getElementById("Jumlah").options[0].text;
-    //document.getElementById("Demo").innerHTML = x;
-
-    //}
-</script>
-
-</body>
 </html>
+
+
