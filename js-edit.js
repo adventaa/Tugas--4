@@ -3,6 +3,12 @@ function kirim() {
     var tombol;
     var pilihan = "";
   
+    // error trapping di inputan jumlah pilihan
+    if (isNaN(jumlah) || jumlah < 1) {
+      alert("Jumlah pilihan tidak boleh 0 dan bilangan negative");
+      return;
+    }
+
     for (var i = 1; i <= jumlah; i++) {
       pilihan +=
         "<p> Pilihan " +
@@ -53,7 +59,7 @@ function hasil() {
     
         if (selectedOption) {
           result.textContent = "Halo, nama saya " + testName.value + ", saya mempunyai sejumlah " + jumlah + 
-          " pilihan yaitu " + radios + ", dan saya memilih " + selectedOption.value + ".";
+          " pilihan yaitu " + radios + "dan saya memilih " + selectedOption.value + ".";
         } else {
           result.textContent = "Please select an option.";
         }
