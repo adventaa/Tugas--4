@@ -2,7 +2,7 @@ function kirim() {
     var jumlah = document.getElementById("jumlah").value;
     var tombol;
     var pilihan = "";
-  
+
     // error trapping di inputan jumlah pilihan
     if (isNaN(jumlah) || jumlah < 1) {
       alert("Jumlah pilihan tidak boleh 0 dan bilangan negative");
